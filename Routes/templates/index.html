@@ -1,0 +1,257 @@
+<<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+
+  function validacion(){
+
+  var formulario_valido = true
+  var nom = document.getElementById("nombre").value
+  document.getElementById("myBtn").disabled = true
+  if (nom == null || nom.length == 0)
+  {
+    document.getElementById("myBtn").disabled = true
+    formulario_valido = false
+  }
+
+  nom = document.getElementById("apellido").value 
+  if (nom == null || nom.length == 0)
+  {
+    document.getElementById("myBtn").disabled = true
+    formulario_valido = false
+  }
+
+  nom = document.getElementById("nacimiento").value 
+  if (nom == null || nom.length == 0)
+  {
+    document.getElementById("myBtn").disabled = true
+    formulario_valido = false
+  }
+
+  nom = document.getElementById("ocupacion").value 
+  if (nom == null || nom.length == 0)
+  {
+    document.getElementById("myBtn").disabled = true
+    formulario_valido = false
+  }
+
+  nom = document.getElementById("perfil").value
+  if (nom == null || nom.length == 0)
+  {
+    document.getElementById("myBtn").disabled = true
+    formulario_valido = false
+  }
+
+  var radio_seleccionado = false;
+  nom = document.getElementsByName("english_level");
+  for (let i = 0; i < nom.length; i++)
+  {
+    if(nom[i].checked)
+    {
+      radio_seleccionado = true;
+    }
+  }
+  if (!radio_seleccionado)
+  {
+    document.getElementById("myBtn").disabled = true
+  }
+
+
+  nom = document.getElementById("programing_languagues").value
+  if (nom == null || nom == 0)
+  {
+    document.getElementById("myBtn").disabled = true
+    formulario_valido = false
+  }
+
+  nom = document.getElementById("aptitudes").value;
+  if (nom == null || nom.length == 0)
+  {
+    document.getElementById("myBtn").disabled = true
+    formulario_valido = false
+  }
+
+  var check_seleccionado = false;
+  nom = document.getElementsByName("habilities"); 
+  for (let i = 0; i < nom.length; i++)
+  {
+    if(nom[i].checked)
+    {
+      check_seleccionado = true;
+    }
+  }
+  if (!check_seleccionado)
+  {
+    document.getElementById("myBtn").disabled = true
+  }
+
+
+  nom = document.getElementById("telefono").value
+  if (nom == null || nom.length == 0)
+  {
+    document.getElementById("myBtn").disabled = true
+    formulario_valido = false
+  }
+
+
+  nom = document.getElementById("email").value
+  if (nom == null || nom.length == 0)
+  {
+    document.getElementById("myBtn").disabled = true
+    formulario_valido = false
+  }
+
+  nom = document.getElementById("Linkedin").value
+  if (nom == null || nom.length == 0)
+  {
+    document.getElementById("myBtn").disabled = true
+    formulario_valido = false
+  }
+
+  if(formulario_valido == true)
+  {
+    document.getElementById("myBtn").disabled = false
+  }
+
+  }
+
+</script>
+
+</head>
+<body>
+
+  <style>
+        
+  legend{
+      border: solid 1px #0000c5;
+      padding: 5px;
+      font-weight: bold;
+      border-radius: 20px;
+      background: #a6daea;
+
+    </style>
+
+    <form action= "{{url_for('Curriculum_Vitae') }}" method="post" onclick=validacion()>
+
+  <fieldset>
+
+    <legend>Información básica</legend>
+    <ul>
+
+      <p><label>Nombres: <input type="text" name="name" id="nombre"></label>
+      <label>Apellidos: <input type="text" name="last_name" id="apellido"></label></p>
+    <p><label>Fecha de nacimiento: <input type="date" name="born" id="nacimiento"></label></p>
+
+    <p><label>Ocupacion: <input type="text" name="occupation" id="ocupacion"></label></p>
+
+    <label for="nacionality">Elige nacionalidad:</label>
+    <select id="nacionality" name="nacionality">
+      <option value="Chile">Chile</option>
+      <option value="Argentina">Argentina</option>
+      <option value="Colombia">Colombia</option>
+      <option value="Ecuador">Ecuador</option>
+      <option value="Venezuela">Venezuela</option>
+      <option value="España">España</option>
+      <option value="Bolivia">Bolivia</option>
+      <option value="Uruguay">Uruguay</option>
+      <option value="Paraguay">Paraguay</option>
+      <option value="Peru">Peru</option>
+    </select>
+
+    </ul>
+  </fieldset>
+  <br/>
+
+  <fieldset>
+
+    <legend>Información extra </legend>
+ 
+    <ul>
+
+    <p>Perfil:<p>
+
+    <textarea id="perfil" name="perfil" rows="perfil" cols="perfil">
+    
+    </textarea>
+
+    <p>Nivel de ingles:</p>
+      <br/>
+
+      <label><input type="radio" name="english_level" value="basico">basico</label>
+
+      <label><input type="radio" name="english_level" value="intermedio">intermedio</label>
+
+      <label><input type="radio" name="english_level" value="avanzado">avanzado</label>
+
+      <label><input type="radio" name="english_level" value="fluido">fluido</label>
+
+      <br/><br/>
+
+      <p>Elige tus lenguajes de programacion:</p>
+
+      <select name="programing_languagues" id="programing_languagues" multiple>
+        <option value="Python">Python</option>
+        <option value="C++">C++</option>
+        <option value="C#">C#</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="php">php</option>
+        <option value="Java">Java</option>
+      </select>
+      <br/><br/>
+
+      <p><label>Elige tus aptitudes: <input type="text" name="aptitudes" list="list_of_aptitudes" id="aptitudes"></label></p>
+
+<datalist id="list_of_aptitudes">
+
+    <select name="aptitudes">
+
+      <option>Inteligencia emocional</option>
+
+      <option>Espiritu critico</option>
+
+      <option>Trabajo en equipo</option>
+
+      <option>Capacidad analitica</option>
+
+      <option>Habilidades fisicas</option>
+
+    </select>
+
+  </label>
+
+</datalist>
+
+    <p>Elige tus habilidades:</p>
+
+   <label><input type="checkbox" name="habilities" value="Acondicionamiento fisico">Acondicionamiento fisico</label><br />
+   <label><input type="checkbox" name="habilities" value="Creacion de videos">Creacion de videos</label><br />
+   <label><input type="checkbox" name="habilities" value="Pack office">Pack office</label><br />
+   <label><input type="checkbox" name="habilities" value="Tenis">Tenis</label><br />
+
+  </ul>
+  </fieldset>
+
+
+  </br>
+  <fieldset>
+
+    <legend>Contacto</legend>
+    <ul>
+
+    <p><label>Número telefónico: <input type="text" name="phone" id="telefono"></label></p>
+
+    <p><label>Correo electronico: <input type="email" name="email" id="email"></label></p>
+
+    <p><label>introduce el link de Linkedin: <input type="text" name="Linkedin" id="Linkedin"></label></p>
+
+    </ul>
+  </fieldset>
+  <br/>
+
+    <input type="submit" value="Enviar datos" id="myBtn">
+
+  </form>
+
+</body>
+</html>

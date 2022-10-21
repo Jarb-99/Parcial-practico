@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Curriculum Vitae</title>
+
+		<style>
+
+			/*
+			TRABAJO DE: JOEL ANDRES REINOSO BENGOA
+			GRUPO: CCOMP3-1 / 2022-2
+			*/
+
+
+			#foto{
+				margin: 40px;
+				border: solid 7px #cccccc;
+
+			}		
+
+			#principal{
+				width: 80%;
+				margin: 0 auto;
+				margin-top: 30px;
+				background: #888;
+				font-family: Arial;
+			}
+
+			#nombre
+			{
+				font-family: Bahnschrift SemiBold;
+			}
+
+			#perfil{
+				width: 30%;
+				background: lightgreen;
+				background: #bababa;
+				margin-bottom: 30px;
+			}
+
+			#cuerpo{
+				width: 70%;
+				background: white;
+			}
+				
+			legend{
+				border: solid 1px #0000c5;
+				padding: 5px;
+				font-weight: bold;
+				border-radius: 20px;
+				background: #a6daea;
+			}
+
+
+		</style>
+	
+	</head>
+
+	<body>
+
+	<div id="principal">
+
+		<div id= "nombre">
+
+		<img src="../static/Foto.jpg"
+		align="right"
+		width="230"
+		id="foto" />
+
+		<br/>
+		<p style ="font-size: 60px" align="center">{{nombre}} {{apellido}}</p>
+		<p style ="font-size: 30px" align="center">{{ocupacion}}</p>
+		<br/>
+
+		</div>
+
+		<div id="perfil"style = "float: left">
+
+		<br/>
+		<fieldset>
+			<legend>Perfil</legend>
+				<ul>
+					<li>
+					{{perfil}}
+					</li>
+
+					<br/><br/><br/><br/><br/><br/>
+					<h3>DATOS PERSONALES</h3>
+					<li>Fecha de nacimiento: {{nacimiento}}</li>
+					<li>Nacionalidad: {{nacionalidad}}</li>
+				
+
+					<br/><br/><br/>
+					<h3>IDIOMAS</h3>
+					<li>Español: Materno</li>
+					<li>Ingles: {{nivel_de_ingles}}</li>
+
+					<br/><br/><br/>
+					<h3>LENGUAJES DE PROGRAMACION</h3>
+					<li>{{lenguajes_de_programacion}}</li>
+
+					<br/><br/><br/>
+					<h3>APTITUDES</h3>
+					<li>{{aptitudes}}</li>
+
+					<br/><br/><br/>
+					<h3>HABILIDADES</h3>
+					<li>{{habilidades}}</li>
+
+					<br/><br/><br/>
+					<h3>CONTACTO</h3>
+					<li>Número: {{numero}}</li>
+					<li>Correo: {{mail}}</li>
+
+					<br/><br/><br/>
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					<h3>REDES SOCIALES</h3>
+					<li>Linkedin</li>
+					<br/>
+					
+					<A HREF ="{{Linkedin}}">{{Linkedin}}</A>
+
+				</ul>	
+		</fieldset>
+		<br/>
+
+		</div>
+
+
+		<div id = "cuerpo"style = "float: left;">
+
+		<br/>
+		<fieldset>
+			<legend>Experiencia Profesional</legend>
+			<ul>
+
+				<h3><u>LOGISTICA AQP – GRUPO PORTUGAL</u></h3>
+				<p><b>Arequipa-Perú, </b>| 2020-Actualmente</p>
+				<p>Ejecutivo de cuentas comerciales</p>
+				<p><b>Tareas realizadas:</b></p>
+
+				<li> Encargada del área comercial de la imprenta Portugal Graphics. </li>
+				
+				<li>Ventas corporativas para aumentar la cartera de clientes de la compañía. </li>
+
+				<li>Manejo de todas las cuentas comerciales de la compañía, con excepción de 
+Laboratorios Portugal, esto desde la llegada de la solicitud de cotización, hasta 
+la entrega de los productos, buscando en este proceso una alta eficiencia que 
+permita la fidelización del cliente.</li>
+
+
+				<h3><u>DESTRA S.A.C</u></h3>
+				<p><b>Arequipa-Perú, </b>| 2018-2020</p>
+				<p>Administradora General</p>
+				<p><b>Tareas realizadas:</b></p>
+
+				<li>Encargada de todo el proceso operativo de las unidades de transporte. </li>
+
+				<li> Ventas corporativas para aumentar la cartera de clientes de la compañía. </li>
+
+				<li> Elaboración y aplicación de la estrategia para la captación de nuevos clientes 
+corporativos del sector industrial y minero.</li>
+
+
+				<h3><u>OXYMAN COMERCIAL S.A.C.</u></h3>
+				<p><b>Arequipa-Perú, </b>| 2013-2016</p>
+				<p>Jefa de Ventas</p>
+				<p><b>Tareas realizadas:</b></p>
+
+				<li> Supervisión de todas las tareas de ventas en toda la zona sur del Perú</li>
+
+				<li> Ventas corporativas para la captación de nuevos clientes del sector industrial
+y minero.</li>
+
+				<li>Encargada del proceso y los subprocesos de ventas en las certificaciones IS0-9001, en las auditorias 2013, 2014 y 2015.</li>
+
+				<li> Elaboración de estrategias y planes específicos de marketing y ventas.</li>
+
+			</ul>
+
+		</fieldset>
+		<br/>
+
+		<fieldset>
+			<legend>EDUCACION</legend>
+			<h3> Técnica Profesional en Marketing Empresarial</h3>
+			<p><b>Instituto Tecnológico Privado del Sur</b> | 2009-2011</p>
+			<h3>Administración de Negocios</h3>
+			<p><b>Universidad Continental</b> | 2019-2022</p>
+		</fieldset>
+		<br/>
+
+		<fieldset>
+			<legend>SOFTWARE</legend>
+			<p><b>Excel:</b> Nivel avanzado</p>
+			<p><b>PowerPoint:</b> Nivel avanzado</p>
+			<p><b>Word:</b> Nivel avanzado</p>
+			<p><b>CorelDraw:</b> Nivel intermedio</p>
+			<p><b>Adobe Ilustrator:</b> Nivel intermedio</p>
+
+		</fieldset>
+		<br/>
+
+		<fieldset>
+			<legend>OTRAS CERTIFICACIONES</legend>
+
+			<ul>
+
+			<li> Diplomado en “Liderazgo empresarial católico”</li>
+			<li>Curso Photoshop + Ilustrator 1</li>
+
+			</ul>
+
+		</fieldset>
+		<br/>
+
+		</div>
+
+	</div>
+
+	</body>
+
+</html>
